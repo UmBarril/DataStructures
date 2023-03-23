@@ -1,7 +1,7 @@
 package list;
 
 /**
- * Interface para listas sequenciais
+ * Interface para listas sequenciais.
  * @param <T> O tipo da lista.
  */
 public interface List<T> {
@@ -16,7 +16,7 @@ public interface List<T> {
     /**
      * Tenta remover um elemento da lista baseado em sua posição.
      * @param index A posição do elemento na lista.
-     * @throws NullPointerException se a posição a ser acessada é invalida(excede o tamanho do array ou é um valor negativo)
+     * @throws IndexOutOfBoundsException Caso (index < 0 || index >= size())
      */
     void remove(int index);
 
