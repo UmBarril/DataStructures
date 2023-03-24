@@ -1,7 +1,23 @@
 package list;
 
+/**
+ * Interface para listas sequenciais.
+ * @param <T> O tipo da lista.
+ */
 public interface List<T> {
-    void add(T element);
+
+    /**
+     * Tenta adicionar um elemento ao final da lista.
+     * @param element O elemento para adicionar à lista.
+     * @return True se foi possível adicionar o elemento, false caso contrário.
+     */
+    boolean add(T element);
+
+    /**
+     * Tenta remover um elemento da lista baseado em sua posição.
+     * @param index A posição do elemento na lista.
+     * @throws IndexOutOfBoundsException Caso (index < 0 || index >= size())
+     */
     void remove(int index);
 
     // ...
