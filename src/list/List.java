@@ -18,9 +18,13 @@ public interface List<T> {
      * @param index A posição do elemento na lista.
      * @throws IndexOutOfBoundsException Caso (index < 0 || index >= size())
      */
-    void remove(int index);
+    T remove(int index);
+
+    /**
+     * @return o tamanho da lista
+     */
+    int size();
 
     // ...
-
     // TODO
 }
