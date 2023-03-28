@@ -44,7 +44,7 @@ public class ArrayList<T> implements List<T> {
 
     private boolean resizeArray(int newSize) {
         T[] temp = (T[])new Object[newSize];
-        for(int i = 0; i < lastElementPosition; i++) {
+        for(int i = 0; i <= lastElementPosition; i++) {
             temp[i] = array[i];
         }
         this.array = temp;
