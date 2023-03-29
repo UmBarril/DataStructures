@@ -25,6 +25,19 @@ public interface List<T> {
      */
     int size();
 
+    /**
+     * Deletes stuff from the end of the list
+     * @return
+     */
+    T pop();
+
+    /**
+     * Gets the element on the positon
+     * @param index
+     * @return
+     */
+    T get(int index);
+
     // ...
     // TODO
 }

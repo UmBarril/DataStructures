@@ -23,8 +23,12 @@ public class ArrayList<T> implements List<T> {
         return remove(lastElementPosition);
     }
     @Override
+    public T get(int index) {
+        return this.array[index];
+    }
+    @Override
     public T remove(int index) {
-        if(index > lastElementPosition) {
+        if(index > lastElementPosition || index < 0) {
             throw new InvalidIndexException();
         }
         if(index == lastElementPosition) {
