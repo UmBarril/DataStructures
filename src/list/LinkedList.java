@@ -30,6 +30,9 @@ public class LinkedList<T> implements List<T> {
 
     @Override
     public T remove(int index) {
+        if(index > length - 1|| index < 0) {
+            throw new InvalidIndexException(index);
+        }
         if(index == 0) {
             T temp = head.value;
             head = head.next;

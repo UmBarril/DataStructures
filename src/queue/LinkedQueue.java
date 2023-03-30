@@ -1,5 +1,5 @@
 package queue;
 
-public class LinkedQueue {
+public class LinkedQueue<T> implements Queue<T> {
     // TODO
 }

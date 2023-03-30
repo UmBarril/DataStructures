@@ -1,5 +1,5 @@
 package deque;
 
-public class LinkedDeque {
+public class LinkedDeque<T> implements Deque<T>  {
     // TODO
 }

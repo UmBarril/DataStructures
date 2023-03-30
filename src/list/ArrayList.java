@@ -29,7 +29,7 @@ public class ArrayList<T> implements List<T> {
     @Override
     public T remove(int index) {
         if(index > lastElementPosition || index < 0) {
-            throw new InvalidIndexException();
+            throw new InvalidIndexException(index);
         }
         if(index == lastElementPosition) {
             lastElementPosition--;
@@ -54,6 +54,4 @@ public class ArrayList<T> implements List<T> {
         this.array = temp;
         return true;
     }
-
-    // TODO
 }

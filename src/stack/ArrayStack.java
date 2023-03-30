@@ -1,5 +1,5 @@
 package stack;
 
-public class ArrayStack {
+public class ArrayStack<T> implements Stack<T> {
     // TODO
 }
