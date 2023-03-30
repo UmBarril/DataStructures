@@ -6,4 +6,5 @@ public interface Queue<T> {
     T poll();
     T add();
     T remove();
+    int size();
 }
