@@ -1,6 +1,7 @@
 package deque;
 
 public class ArrayDeque<T> implements Deque<T> {
+    // TODO
     @Override
     public T poll() {
         return null;
@@ -30,5 +31,4 @@ public class ArrayDeque<T> implements Deque<T> {
     public int size() {
         return 0;
     }
-    // TODO
 }
