@@ -1,15 +1,14 @@
 package list;
 
-class Node<T> {
-    Node<T> next;
-    T value;
-
-    public Node(T value) {
-        this.value = value;
-    }
-}
 
 public class LinkedList<T> implements List<T> {
+    private class Node<T> {
+        Node<T> next;
+        T value;
+        public Node(T value) {
+            this.value = value;
+        }
+    }
     private int length;
     private Node<T> head;
     private Node<T> tail;

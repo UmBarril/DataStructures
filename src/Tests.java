@@ -1,8 +1,8 @@
-import list.ArrayList;
-import list.LinkedList;
-import list.List;
-import stack.ArrayStack;
-import stack.Stack;
+import list.*;
+import queue.ArrayQueue;
+import queue.LinkedQueue;
+import queue.Queue;
+import stack.*;
 
 public class Tests {
     public static void main(String[] args) {
@@ -10,8 +10,15 @@ public class Tests {
 //        TestList(al);
 //        List<String> ll = new LinkedList<>();
 //        TestList(ll);
-        Stack<Integer> as = new ArrayStack<>();
-        TestStack(as);
+//        Stack<Integer> as = new ArrayStack<>();
+//        TestStack(as);
+//        Stack<Integer> ls = new LinkedStack<>();
+//        TestStack(ls);
+//        Queue<Integer> aq = new ArrayQueue<>();
+//        TestQueue(aq);
+        Queue<Integer> lq = new LinkedQueue<>();
+        TestQueue(lq);
+
     }
     public static void TestDeque() { }
     public static void TestStack(Stack<Integer> stack) {
@@ -27,7 +34,25 @@ public class Tests {
         System.out.println(stack.pop());
     }
     public static void TestTree() { }
-    public static void TestQueue() { }
+    public static void TestQueue(Queue<Integer> queue) {
+        queue.add(1);
+//        queue.add(2);
+//        queue.add(3);
+//        queue.add(4);
+//        queue.add(6);
+//        queue.add(5);
+//        queue.add(5);
+//        queue.add(5);
+//        queue.add(5);
+//        queue.add(5);
+        System.out.println(queue.poll());
+        queue.add(1);
+        System.out.println(queue.poll());
+        System.out.println(queue.poll());
+        System.out.println(queue.poll());
+        System.out.println(queue.poll());
+
+    }
     public static void TestList(List<String> list) {
         list.add("a");
         list.add("b");

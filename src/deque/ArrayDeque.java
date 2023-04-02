@@ -7,13 +7,8 @@ public class ArrayDeque<T> implements Deque<T> {
     }
 
     @Override
-    public T add() {
-        return null;
-    }
-
-    @Override
-    public T remove() {
-        return null;
+    public boolean add(T e) {
+        return false;
     }
 
     @Override
