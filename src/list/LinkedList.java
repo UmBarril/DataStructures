@@ -19,12 +19,10 @@ public class LinkedList<T> implements List<T> {
             head = new Node<>(element);
             tail = head;
             length++;
-            return true;
         }
         tail.next = new Node<>(element);
         tail = tail.next;
         length++;
-        return true;
     }
 
     @Override

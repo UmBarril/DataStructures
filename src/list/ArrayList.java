@@ -13,11 +13,10 @@ public class ArrayList<T> implements List<T> {
     @Override
     public void add(T element) {
         if(lastElementPosition + 1 >= array.length) {
-            if(!resizeArray(array.length * 2)) return false;
+            resizeArray(array.length * 2);
         }
         array[lastElementPosition] = element;
         lastElementPosition++;
-        return true;
     }
     public T pop() {
         return remove(lastElementPosition);
@@ -46,12 +45,11 @@ public class ArrayList<T> implements List<T> {
         return this.lastElementPosition;
     }
 
-    private boolean resizeArray(int newSize) {
+    private void resizeArray(int newSize) {
         T[] temp = (T[])new Object[newSize];
         for(int i = 0; i <= lastElementPosition; i++) {
             temp[i] = array[i];
         }
         this.array = temp;
-        return true;
     }
 }

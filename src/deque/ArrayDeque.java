@@ -9,7 +9,6 @@ public class ArrayDeque<T> implements Deque<T> {
 
     @Override
     public void add(T e) {
-        return false;
     }
 
     @Override

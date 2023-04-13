@@ -43,7 +43,6 @@ public class ArrayQueue<T> implements Queue<T> {
         array[tail] = e;
         tail++;
         size++;
-        return true;
     }
 
     private void resize(int newSize) {
