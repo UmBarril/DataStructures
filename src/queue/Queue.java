@@ -4,6 +4,6 @@ public interface Queue<T> {
     // TODO: add comments
     T peek();
     T poll();
-    boolean add(T e);
+    void add(T e);
     int size();
 }

@@ -7,18 +7,17 @@ import stack.*;
 public class Tests {
     public static void main(String[] args) {
 //        List<String> al = new ArrayList<>();
-//        TestList(al);
+//        TestList(al)
 //        List<String> ll = new LinkedList<>();
 //        TestList(ll);
 //        Stack<Integer> as = new ArrayStack<>();
 //        TestStack(as);
 //        Stack<Integer> ls = new LinkedStack<>();
 //        TestStack(ls);
-//        Queue<Integer> aq = new ArrayQueue<>();
-//        TestQueue(aq);
-        Queue<Integer> lq = new LinkedQueue<>();
-        TestQueue(lq);
-
+        Queue<Integer> aq = new ArrayQueue<>(5);
+        TestQueue(aq);
+//        Queue<Integer> lq = new LinkedQueue<>();
+//        TestQueue(lq);
     }
     public static void TestDeque() { }
     public static void TestStack(Stack<Integer> stack) {
@@ -36,17 +35,18 @@ public class Tests {
     public static void TestTree() { }
     public static void TestQueue(Queue<Integer> queue) {
         queue.add(1);
-//        queue.add(2);
-//        queue.add(3);
-//        queue.add(4);
-//        queue.add(6);
-//        queue.add(5);
+        queue.add(2);
+        queue.add(3);
+        queue.add(4);
+        queue.poll();
+        queue.add(6);
+        queue.add(5);
 //        queue.add(5);
 //        queue.add(5);
 //        queue.add(5);
 //        queue.add(5);
         System.out.println(queue.poll());
-        queue.add(1);
+//        queue.add(1);
         System.out.println(queue.poll());
         System.out.println(queue.poll());
         System.out.println(queue.poll());

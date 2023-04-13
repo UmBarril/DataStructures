@@ -11,7 +11,7 @@ public class ArrayList<T> implements List<T> {
         this.array = (T[])new Object[size];
     }
     @Override
-    public boolean add(T element) {
+    public void add(T element) {
         if(lastElementPosition + 1 >= array.length) {
             if(!resizeArray(array.length * 2)) return false;
         }

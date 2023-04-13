@@ -2,8 +2,9 @@ package queue;
 
 public class ArrayQueue<T> implements Queue<T> {
     private T[] array;
-    private int queueStart = 0;
-    private int queueEnd = 0;
+    private int size = 0;
+    private int head = 0;
+    private int tail = 0;
     public ArrayQueue() {
         this(10);
     }
@@ -12,48 +13,56 @@ public class ArrayQueue<T> implements Queue<T> {
     }
     @Override
     public T peek() {
-        return array[queueStart];
+        return array[head];
     }
 
     @Override
     public T poll() {
-        if(size() < array.length / 4) {
-            pullArrayBackAndResize(array.length / 2);
+        if(size < 1) return null;
+        if(size > 0 && size < array.length / 4) {
+            resize(array.length / 2);
         }
-        if(queueStart >= queueEnd) {
-            return null;
+        if(head == array.length) {
+            head = 0;
         }
-        T temp = array[queueStart];
-        array[queueStart] = null;
-        queueStart++;
+        T temp = array[head];
+        array[head] = null;
+        head++;
+        size--;
         return temp;
     }
 
     @Override
-    public boolean add(T e) {
-        if(array.length < queueEnd) {
-            if(size() + 1 > array.length / 2)
-                pullArrayBackAndResize(array.length * 2);
-            else pullArrayBackAndResize(array.length);
+    public void add(T e) {
+        if(tail == array.length) {
+            tail = 0;
         }
-        array[queueEnd] = e;
-        queueEnd++;
+        if(size == array.length) {
+            resize(array.length * 2);
+        }
+        array[tail] = e;
+        tail++;
+        size++;
         return true;
+    }
+
+    private void resize(int newSize) {
+        T[] newArray = (T[]) new Object[newSize];
+        int nextInOldArray = head;
+        for (int i = 0; i < size; i++) {
+            nextInOldArray += i;
+            if(nextInOldArray == size - 1) {
+                nextInOldArray = 0;
+            }
+            newArray[i] = array[nextInOldArray];
+        }
+        array = newArray;
+        tail = size;
+        head = 0;
     }
 
     @Override
     public int size() {
-        return queueEnd - queueStart;
-    }
-
-    private void pullArrayBackAndResize(int newSize) {
-        T[] newArray = (T[]) new Object[newSize];
-        int size = size();
-        for (int i = 0; i < size; i++) {
-            newArray[i] = array[queueStart + i];
-        }
-        array = newArray;
-        queueEnd = size;
-        queueStart = 0;
+        return size;
     }
 }

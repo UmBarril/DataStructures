@@ -9,9 +9,8 @@ public interface List<T> {
     /**
      * Tenta adicionar um elemento ao final da lista.
      * @param element O elemento para adicionar à lista.
-     * @return True se foi possível adicionar o elemento, false caso contrário.
      */
-    boolean add(T element);
+    void add(T element);
 
     /**
      * Tenta remover um elemento da lista baseado em sua posição.

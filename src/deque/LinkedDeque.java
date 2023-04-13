@@ -13,8 +13,8 @@ public class LinkedDeque<T> implements Deque<T>  {
     }
 
     @Override
-    public boolean add(T e) {
-        return false;
+    public void add(T e) {
+
     }
 
     @Override

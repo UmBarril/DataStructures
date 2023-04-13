@@ -14,7 +14,7 @@ public class LinkedList<T> implements List<T> {
     private Node<T> tail;
 
     @Override
-    public boolean add(T element) {
+    public void add(T element) {
         if(tail == null) {
             head = new Node<>(element);
             tail = head;

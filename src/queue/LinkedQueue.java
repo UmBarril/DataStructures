@@ -30,16 +30,14 @@ public class LinkedQueue<T> implements Queue<T> {
     }
 
     @Override
-    public boolean add(T e) {
+    public void add(T e) {
         size++;
         if(last == null) {
             first = new Node<>(e);
             last = first;
-            return true;
         }
         last.next = new Node<>(e);
         last = last.next;
-        return true;
     }
 
     @Override
