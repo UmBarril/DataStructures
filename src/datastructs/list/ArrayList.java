@@ -1,4 +1,4 @@
-package list;
+package datastructs.list;
 
 public class ArrayList<T> implements List<T> {
     private T[] array;

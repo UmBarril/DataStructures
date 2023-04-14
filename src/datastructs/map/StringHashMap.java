@@ -1,6 +1,6 @@
-package map;
+package datastructs.map;
 
-import list.LinkedList;
+import datastructs.list.LinkedList;
 
 public class StringHashMap<V> implements Map<String, V> {
     public class Pair<K, V> {

@@ -1,4 +1,4 @@
-package stack;
+package datastructs.stack;
 
 public class LinkedStack<T> implements Stack<T> {
     private class Node<T> {

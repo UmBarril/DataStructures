@@ -1,7 +1,12 @@
-package deque;
+package datastructs.deque;
 
-public class ArrayDeque<T> implements Deque<T> {
-    // TODO
+public class LinkedDeque<T> implements Deque<T>  {
+    private class Node<T> {
+        Node<T> next;
+        Node<T> previous;
+        T value;
+        public Node(T value) { this.value = value; }
+    }
     @Override
     public T poll() {
         return null;
@@ -9,6 +14,7 @@ public class ArrayDeque<T> implements Deque<T> {
 
     @Override
     public void add(T e) {
+
     }
 
     @Override
@@ -30,4 +36,5 @@ public class ArrayDeque<T> implements Deque<T> {
     public int size() {
         return 0;
     }
+    // TODO
 }

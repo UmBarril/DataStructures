@@ -1,4 +1,4 @@
-package queue;
+package datastructs.queue;
 
 public class LinkedQueue<T> implements Queue<T> {
     private class Node<T> {

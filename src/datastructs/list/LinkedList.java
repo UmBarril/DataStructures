@@ -1,4 +1,4 @@
-package list;
+package datastructs.list;
 
 
 public class LinkedList<T> implements List<T> {

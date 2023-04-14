@@ -1,4 +1,4 @@
-package stack;
+package datastructs.stack;
 
 public class ArrayStack<T> implements Stack<T> {
     private T[] array;

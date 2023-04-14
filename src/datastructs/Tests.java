@@ -1,8 +1,9 @@
-import list.*;
-import queue.ArrayQueue;
-import queue.LinkedQueue;
-import queue.Queue;
-import stack.*;
+package datastructs;
+
+import datastructs.list.*;
+import datastructs.queue.ArrayQueue;
+import datastructs.queue.Queue;
+import datastructs.stack.*;
 
 public class Tests {
     public static void main(String[] args) {
@@ -41,12 +42,12 @@ public class Tests {
         queue.poll();
         queue.add(6);
         queue.add(5);
-//        queue.add(5);
-//        queue.add(5);
-//        queue.add(5);
-//        queue.add(5);
+//        datastructs.queue.add(5);
+//        datastructs.queue.add(5);
+//        datastructs.queue.add(5);
+//        datastructs.queue.add(5);
         System.out.println(queue.poll());
-//        queue.add(1);
+//        datastructs.queue.add(1);
         System.out.println(queue.poll());
         System.out.println(queue.poll());
         System.out.println(queue.poll());

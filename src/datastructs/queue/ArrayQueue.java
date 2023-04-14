@@ -1,4 +1,4 @@
-package queue;
+package datastructs.queue;
 
 public class ArrayQueue<T> implements Queue<T> {
     private T[] array;

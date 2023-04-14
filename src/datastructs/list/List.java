@@ -1,4 +1,4 @@
-package list;
+package datastructs.list;
 
 /**
  * Interface para listas sequenciais.
@@ -25,7 +25,7 @@ public interface List<T> {
     int size();
 
     /**
-     * Deletes stuff from the end of the list
+     * Deletes stuff from the end of the datastructs.list
      * @return
      */
     T pop();

@@ -1,6 +1,4 @@
-package stack;
-
-import java.util.Deque;
+package datastructs.stack;
 
 public interface Stack<T> {
     // TODO: add comments

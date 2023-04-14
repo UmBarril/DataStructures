@@ -1,4 +1,4 @@
-package queue;
+package datastructs.queue;
 
 public interface Queue<T> {
     // TODO: add comments
